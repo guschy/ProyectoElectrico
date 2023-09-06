@@ -1,0 +1,26 @@
+{% extends "App/index.html" %}
+
+{% load static %}
+
+{% block pestania %} 
+
+Facturacion
+
+{% endblock %}
+
+
+
+{% block codigoMagico  %} 
+
+    Facturacion: 
+    {%for factura in facturas%}
+       <{% comment "" %} {{factura}} {% endcomment %} 
+       <p>Tarjeta: {{factura.tarjeta}} </p>
+        <p>  Pago efectivo: {{factura.pago_Efectivo}} </p>
+        <p>Pago no efectivo: {{factura.pago_No_Efectivo}} </p>
+        <p> Pago total: {{factura.total}} </p>
+
+    {% endfor %}
+
+{% endblock %}
+
