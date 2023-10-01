@@ -9,6 +9,7 @@ class clientes(models.Model):
     direccion = models.CharField(max_length=60)
     telefono = models.IntegerField()
     fecha = models.DateField()
+    mail = models.CharField(max_length=50)
     
     def __str__(self):
         ##return f'nombre: {self.nombre}'
